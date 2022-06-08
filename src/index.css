@@ -1,13 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  display: table-row;
+  align-items: flex;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+.start__header {
+  display: flex;
+  background-color: aliceblue;
+}
+
+.header__myloc__logo {
+
+}
+
+.header__kund__logo {
+  float: left;
+} 
+
+
+
+.slideshow__window {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50vmax;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  /* background-color: aquamarine; */
+  position: relative;
+  width: 100vmax;
+  height: 50vmax;
+  object-fit: scale-down;
+}
+
+
+.slide__img {
+  opacity: 0;
+  transition-duration: 0.5s ease;
+}
+
+.slide__img.active {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
