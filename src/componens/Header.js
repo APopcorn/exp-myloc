@@ -7,18 +7,21 @@ const Header = ({ slides }) => {
             
 
             <img 
-                className="header__myloc__logo"
+                className="header__myloc logo"
                 src="https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png" 
                 alt="MyLoc" 
             />
             
-            <h1 className="header__kund__logo" > {"P09002414"} -{"VallPark"} </h1>
+            <div className="header__kund logo">
+                <a> {"P09002414"} -{"VallPark"} </a>
 
-            <img
-                className="header__kund__logo" 
-                src={"https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png"} 
-                alt={"temp"} 
-            />
+                <img
+                    className="logo"
+                    src={"https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png"} 
+                    alt={"temp"} 
+                />
+            </div>
+            
 
         </div>
     )

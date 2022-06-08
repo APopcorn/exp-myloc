@@ -2,54 +2,127 @@ import { useState } from "react";
 import SlideshowWindow from "./componens/SlideshowWindow";
 import Header from "./componens/Header";
 
+import Url from "./componens/Url";
+import File from "./componens/File";
+import Calendar from "./componens/CalenderSlide";
+
+
+import TestPDF from './PDF_Test.pdf';
+import TestPNG from './Local_PNG_Test.png'
 
 
 
 function App() {
   const [slides, setSlides] = useState([
     {
-      id: 1,
-      format: 'url',
-      time: 2,
-      url: 'https://myloc.se/wp-content/uploads/2018/05/Myloc-DN-annons.png',
-      schema: '',
-      file: '',
-    },
-    {
-      id: 2,
-      format: 'schema',
-      time: 4,
-      url: 'https://www.cityofmelrose.org/sites/g/files/vyhlif3451/f/uploads/dpw_construction_schedule_2017.jpg',
-      schema: [
-        {
-          title  : 'event1',
-          start  : '2022-06-06'
-        },
-        {
-          title  : 'event2',
-          start  : '2022-06-06',
-          end    : '2022-06-08'
-        },
-        {
-          title  : 'event3',
-          start  : '2022-06-09T12:30:00',
-          allDay : false // will make the time show
-        }
-      ],
-      workday: ["08:00:00", "17:00:00"],
-      schemaFormat: "timeGridWeek",
-      file: '',
-    },
-    
-    
-    
+    order: 1,
+    time: 1,
+    format: 'schema',
+    name: "Kalender",
+    schema: [
+      {
+        title  : 'event1',
+        start  : '2022-06-06'
+      },
+      {
+        title  : 'event2',
+        start  : '2022-06-06', 
+        end    : '2022-06-08'
+      },
+      {
+        title  : 'event3',
+        start  : '2022-06-09T12:30:00',
+        allDay : false // will make the time show
+      }
+    ],
+    workday: ["08:00:00", "17:00:00"],
+    initDate: '2022-06-08',
+    schemaFormat: "timeGridDay",
+    weekends: true,
+
+  },
+  {
+    order: 2,
+    time: 1,
+    format: 'schema',
+    name: "Kalender ve",
+    schema: [
+      {
+        title  : 'event1',
+        start  : '2022-06-06'
+      },
+      {
+        title  : 'event2',
+        start  : '2022-06-06',
+        end    : '2022-06-08'
+      },
+      {
+        title  : 'event3',
+        start  : '2022-06-09T12:30:00',
+        allDay : false // will make the time show
+      }
+    ],
+    workday: ["08:00:00", "17:00:00"],
+    initDate: '2022-06-08',
+    schemaFormat: "timeGridWeek",
+    weekends: true,
+  },
+  {
+    order: 3,
+    time: 1,
+    format: 'file',
+    name: "jpeg",
+    file: TestPNG,
+  },
+  {
+    order: 4,
+    time: 5,
+    format: 'file',
+    name: "pdf",
+    page: 2,
+    file: TestPDF,
+  },
+  {
+    order: 5,
+    time: 1,
+    format: 'file',
+    name: "png",
+    file: TestPNG ,
+  }, 
+  {
+    order: 6,
+    time: 5,
+    format: 'url',
+    name: "vanlige länk hemsida",
+    url: "https://myloc.se/sv/start/",
+  }, 
+  {
+    order: 7,
+    time: 5,
+    format: 'url',
+    name: "speciel länk till byggkamera",
+    url: "https://images.squarespace-cdn.com/content/v1/5ca5c15429f2cc0845827a9d/1608134380887-9KPHE8RJVKFODF3YTVJ6/DJI_0169-Pano-2.jpg",
+  }, 
+  {
+    order: 8,
+    time: 1,
+    format: 'file',
+    name: "pdf",
+    page: 1,
+    file: TestPDF,
+    filename: ""
+  }, 
   ])
 
 
   return (
     <div className="container">
-        {/* <Header slides={slides} /> */}
+        <Header slides={slides} />
         <SlideshowWindow slides={slides} />
+        {/* <Url /> */}
+        {/* <File file={slides[3]}/> */}
+        {/* <CalenderSlide slide={slides[1]}/> */}
+
         
     </div>
   );

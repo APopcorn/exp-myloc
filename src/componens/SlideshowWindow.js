@@ -1,7 +1,14 @@
 import { useState, useEffect, useRef } from "react"
-import FullCalendar from '@fullcalendar/react' // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-import timeGridPlugin from "@fullcalendar/timegrid";
+import Calendar from "./CalenderSlide";
+import File from "./File";
+import Url from "./Url";
+
+import { Document, Page } from 'react-pdf';
+
+
+
+import TestPDF from '../PDF_Test.pdf';
+import TestPNG from '../Local_PNG_Test.png'
 
 
 
@@ -17,9 +24,6 @@ const SlideshowWindow = ({ slides }) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
 
 
   /* AutoPlay functionality  */
@@ -39,16 +43,12 @@ const SlideshowWindow = ({ slides }) => {
     }
     
     const currentSlideTime = slides[current].time;
-    console.log("time intervals: " + currentSlideTime + "s");
+    /* console.log("time intervals: " + currentSlideTime + "s"); */
 
     const intervals = setInterval(play, 1000 * currentSlideTime)
     return () => clearInterval(intervals)
   }, [current]) 
 
-  const autoPlay = () => {
-    console.log(slides);
-
-  }
 
   /* stop */
   if (!Array.isArray(slides) || slides.length <= 0) {
@@ -69,29 +69,14 @@ const SlideshowWindow = ({ slides }) => {
             (() => {
               switch (slide.format) {
                 case 'url':
-                  return <img 
-                    className="image" 
-                    src={slide.url} />
+                  return <Url url={slide}/>
+
                 case 'file':
-                  return <img 
-                  className="image" 
-                  src={slide.file} />
+                  return <File file={slide}/>
+
                 case 'schema':
+                  return <Calendar slide={slide}/>
 
-                  return <FullCalendar 
-                    plugins={[ timeGridPlugin ]} 
-                    initialView={slide.schemaFormat} 
-                    weekends={false}
-                    slotMinTime={"08:00:00"} // varriabel för min obs
-                    slotMaxTime={"17:00:00"} // variabel för max obs
-
-                    height={"auto"} 
-                    expandRows={true}
-
-                    events={slide.schema}
-                    
-                    
-                    />
                 default:
                   return null
               }
@@ -110,3 +95,16 @@ const SlideshowWindow = ({ slides }) => {
 
 export default SlideshowWindow
 
+/* <img 
+    className="image" 
+    src={slide.file} /> */
+
+
+/*  <Document file={"https://www.lth.se/fileadmin/lth/informationsmaterial/informationLTH.pdf"}>
+      <Page pageNumber={2} /> 
+    </Document> */
+
+/* <img 
+    className="image" 
+    src={slide.url} 
+    alt="" /> */
