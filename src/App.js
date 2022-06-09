@@ -4,11 +4,11 @@ import Header from "./componens/Header";
 
 import Url from "./componens/Url";
 import File from "./componens/File";
-import Calendar from "./componens/CalenderSlide";
+import Calendar from "./componens/Calendar";
 
 
-import TestPDF from './PDF_Test.pdf';
-import TestPNG from './Local_PNG_Test.png'
+import TestPDF from './Sample Documents/PDF_Test.pdf';
+import TestPNG from './Sample Documents/Local_PNG_Test.png'
 
 
 
@@ -16,7 +16,7 @@ function App() {
   const [slides, setSlides] = useState([
     {
     order: 1,
-    time: 1,
+    time: 5,
     format: 'schema',
     name: "Kalender",
     schema: [
@@ -43,7 +43,7 @@ function App() {
   },
   {
     order: 2,
-    time: 1,
+    time: 5,
     format: 'schema',
     name: "Kalender ve",
     schema: [
@@ -69,22 +69,22 @@ function App() {
   },
   {
     order: 3,
-    time: 1,
+    time: 5,
     format: 'file',
     name: "jpeg",
     file: TestPNG,
   },
-  {
+  /* {
     order: 4,
     time: 5,
     format: 'file',
     name: "pdf",
     page: 2,
     file: TestPDF,
-  },
+  }, */
   {
     order: 5,
-    time: 1,
+    time: 5,
     format: 'file',
     name: "png",
     file: TestPNG ,
@@ -101,17 +101,17 @@ function App() {
     time: 5,
     format: 'url',
     name: "speciel länk till byggkamera",
-    url: "https://images.squarespace-cdn.com/content/v1/5ca5c15429f2cc0845827a9d/1608134380887-9KPHE8RJVKFODF3YTVJ6/DJI_0169-Pano-2.jpg",
+    url: "https://myloc.se/sv/havsalliansen-how-to-reuse-and-recycle-in-practice-and-at-scale/", // https://images.squarespace-cdn.com/content/v1/5ca5c15429f2cc0845827a9d/1608134380887-9KPHE8RJVKFODF3YTVJ6/DJI_0169-Pano-2.jpg
   }, 
-  {
+  /* {
     order: 8,
-    time: 1,
+    time: 5,
     format: 'file',
     name: "pdf",
     page: 1,
     file: TestPDF,
     filename: ""
-  }, 
+  }, */ 
   ])
 
 
@@ -119,9 +119,14 @@ function App() {
     <div className="container">
         <Header slides={slides} />
         <SlideshowWindow slides={slides} />
-        {/* <Url /> */}
+        {/* <Calendar slide={slides[1]}/> */}
+        {/* <File file={slides[6]}/> */}
+        {/* <embed src={TestPDF} type="" width={1000} height={1000} /> */}
+        
         {/* <File file={slides[3]}/> */}
-        {/* <CalenderSlide slide={slides[1]}/> */}
+        {/* <Url url={slides[5]}/> */}
+        
+        
 
         
     </div>

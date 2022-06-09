@@ -27,9 +27,16 @@ const File = ({ file }) => {
                     />
 
                 case 'pdf':
-                  return <Document file={file.file} className="image">
-                            <Page pageNumber={file.page} /> 
-                         </Document> 
+                  return <>
+                    <Document file={file.file} 
+                      className="doc"
+                    >
+                      <Page pageNumber={file.page} 
+                        className="page" /> 
+                      
+                    </Document>
+                  </>
+                   
                 default:
                   return null
               }

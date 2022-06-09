@@ -1,15 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import Calendar from "./CalenderSlide";
+import Calendar from "./Calendar";
 import File from "./File";
 import Url from "./Url";
-
-import { Document, Page } from 'react-pdf';
-
-
-
-import TestPDF from '../PDF_Test.pdf';
-import TestPNG from '../Local_PNG_Test.png'
-
 
 
 
@@ -95,16 +87,3 @@ const SlideshowWindow = ({ slides }) => {
 
 export default SlideshowWindow
 
-/* <img 
-    className="image" 
-    src={slide.file} /> */
-
-
-/*  <Document file={"https://www.lth.se/fileadmin/lth/informationsmaterial/informationLTH.pdf"}>
-      <Page pageNumber={2} /> 
-    </Document> */
-
-/* <img 
-    className="image" 
-    src={slide.url} 
-    alt="" /> */
