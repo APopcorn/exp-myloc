@@ -24,8 +24,8 @@ const Calendar = ({ slide }) => {
 
             slotMinTime={slide.workday[0]} // varriabel för min obs
             slotMaxTime={slide.workday[1]} // variabel för max obs
-
-            height={"calc(100vh - 80px)"}
+            
+            height={"calc(100vh - 100px)"}
             expandRows={true}
 
             events={slide.schema}

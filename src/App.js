@@ -7,8 +7,12 @@ import File from "./componens/File";
 import Calendar from "./componens/Calendar";
 
 
-import TestPDF from './Sample Documents/PDF_Test.pdf';
-import TestPNG from './Sample Documents/Local_PNG_Test.png'
+import TestPDF1 from './Sample Documents/PDF_Test.pdf';
+import TestPDF2 from './Sample Documents/The-Design.pdf';
+import TestPDF3 from './Sample Documents/Proofs.pdf';
+
+import TestPNG1 from './Sample Documents/Local_PNG_Test.png'
+import TestPNG2 from './Sample Documents/Plots.png'
 
 
 
@@ -36,7 +40,7 @@ function App() {
       }
     ],
     workday: ["08:00:00", "17:00:00"],
-    initDate: '2022-06-08',
+    initDate: '2022-06-09',
     schemaFormat: "timeGridDay",
     weekends: true,
 
@@ -72,22 +76,22 @@ function App() {
     time: 5,
     format: 'file',
     name: "jpeg",
-    file: TestPNG,
+    file: TestPNG1,
   },
-  /* {
+  {
     order: 4,
     time: 5,
     format: 'file',
     name: "pdf",
     page: 2,
-    file: TestPDF,
-  }, */
+    file: TestPDF3,
+  },
   {
     order: 5,
     time: 5,
     format: 'file',
     name: "png",
-    file: TestPNG ,
+    file: TestPNG1 ,
   }, 
   {
     order: 6,
@@ -101,17 +105,17 @@ function App() {
     time: 5,
     format: 'url',
     name: "speciel länk till byggkamera",
-    url: "https://myloc.se/sv/havsalliansen-how-to-reuse-and-recycle-in-practice-and-at-scale/", // https://images.squarespace-cdn.com/content/v1/5ca5c15429f2cc0845827a9d/1608134380887-9KPHE8RJVKFODF3YTVJ6/DJI_0169-Pano-2.jpg
+    url: "https://myloc.se/sv/havsalliansen-how-to-reuse-and-recycle-in-practice-and-at-scale/", 
   }, 
-  /* {
+  {
     order: 8,
     time: 5,
     format: 'file',
     name: "pdf",
     page: 1,
-    file: TestPDF,
+    file: TestPDF2,
     filename: ""
-  }, */ 
+  }, 
   ])
 
 

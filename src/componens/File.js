@@ -32,7 +32,11 @@ const File = ({ file }) => {
                       className="doc"
                     >
                       <Page pageNumber={file.page} 
-                        className="page" /> 
+                        className="page"
+                        scale={1.3}
+                        /* width={calc(100vh - 80px)} */
+                         
+                          /> 
                       
                     </Document>
                   </>

@@ -17,7 +17,7 @@ const Header = ({ slides }) => {
 
                 <img
                     className="logo"
-                    src={"https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png"} 
+                    src={"https://www.traineeguiden.se/uploads/media/logo_image/0001/01/jm-logo_logo_image_wide.png"} 
                     alt={"temp"} 
                 />
             </div>
