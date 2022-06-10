@@ -120,12 +120,14 @@ code {
 
 
 .slide__img {
-  opacity: 0;
+  /* opacity: 0; */
+  display: hide;
   transition-duration: 0.5s;
 }
 
 .slide__img.active {
-  opacity: 1;
+  /* opacity: 1; */
+  
   transition-duration: 0.5s;
 }
 

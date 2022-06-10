@@ -78,14 +78,14 @@ function App() {
     name: "jpeg",
     file: TestPNG1,
   },
-  {
+  /* {
     order: 4,
     time: 5,
     format: 'file',
     name: "pdf",
     page: 2,
     file: TestPDF3,
-  },
+  }, */
   {
     order: 5,
     time: 5,
@@ -107,7 +107,7 @@ function App() {
     name: "speciel länk till byggkamera",
     url: "https://myloc.se/sv/havsalliansen-how-to-reuse-and-recycle-in-practice-and-at-scale/", 
   }, 
-  {
+  /* {
     order: 8,
     time: 5,
     format: 'file',
@@ -115,7 +115,7 @@ function App() {
     page: 1,
     file: TestPDF2,
     filename: ""
-  }, 
+  }, */ 
   ])
 
 
