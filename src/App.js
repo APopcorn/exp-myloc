@@ -14,6 +14,10 @@ import TestPDF3 from './Sample Documents/Proofs.pdf';
 import TestPNG1 from './Sample Documents/Local_PNG_Test.png'
 import TestPNG2 from './Sample Documents/Plots.png'
 
+import TestOTS_PDF1 from './Sample Documents/OTS-1.pdf'
+import TestOTS_PDF2 from './Sample Documents/OTS-2.pdf'
+
+
 
 
 function App() {
@@ -83,8 +87,8 @@ function App() {
     time: 5,
     format: 'file',
     name: "pdf",
-    page: 2,
-    file: TestPDF3,
+    page: 1,
+    file: TestOTS_PDF1,
   },
   {
     order: 5,
@@ -112,8 +116,8 @@ function App() {
     time: 5,
     format: 'file',
     name: "pdf",
-    page: 120,
-    file: TestPDF2,
+    page: 1,
+    file: TestOTS_PDF2,
     filename: ""
   }, 
   ])
