@@ -130,8 +130,7 @@ function App() {
         {/* <File file={slides[3]}/> */}
         {/* <Url url={slides[5]}/> */}
         
-        
-
+       
         
     </div>
   );
