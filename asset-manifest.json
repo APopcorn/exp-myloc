@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/exp-myloc/static/css/main.1a8d132f.css",
+    "main.js": "/exp-myloc/static/js/main.f6bb5034.js",
+    "static/js/787.e02dea3e.chunk.js": "/exp-myloc/static/js/787.e02dea3e.chunk.js",
+    "static/media/The-Design.pdf": "/exp-myloc/static/media/The-Design.0f01a5bf504a2d4a40c9.pdf",
+    "static/media/Proofs.pdf": "/exp-myloc/static/media/Proofs.f462d5b77842468be9b4.pdf",
+    "static/media/Plots.png": "/exp-myloc/static/media/Plots.0e85ff2b5a86fdc719ae.png",
+    "static/media/PDF_Test.pdf": "/exp-myloc/static/media/PDF_Test.418b795c27a28a67cabe.pdf",
+    "index.html": "/exp-myloc/index.html",
+    "main.1a8d132f.css.map": "/exp-myloc/static/css/main.1a8d132f.css.map",
+    "main.f6bb5034.js.map": "/exp-myloc/static/js/main.f6bb5034.js.map",
+    "787.e02dea3e.chunk.js.map": "/exp-myloc/static/js/787.e02dea3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a8d132f.css",
+    "static/js/main.f6bb5034.js"
+  ]
+}
