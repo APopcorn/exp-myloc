@@ -99,7 +99,6 @@ code {
 
 
 
-
 /* File */
 
 .react-pdf__Page__canvas {
@@ -132,7 +131,7 @@ code {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), (max-height: 600px)  {
   .start__header {
     background-color: blue;
     display: none;
