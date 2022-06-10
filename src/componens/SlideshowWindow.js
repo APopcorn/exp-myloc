@@ -56,7 +56,7 @@ const SlideshowWindow = ({ slides }) => {
 
         return (
           <div className={index === current ? 'slide__img active' : 'slide__img'} key={index}>
-            {index === current ?
+            {
             
             (() => {
               switch (slide.format) {
@@ -74,7 +74,7 @@ const SlideshowWindow = ({ slides }) => {
               }
             })()
             
-            : null}
+            }
             
             
           </div>

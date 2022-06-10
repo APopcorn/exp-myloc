@@ -121,13 +121,13 @@ code {
 
 .slide__img {
   /* opacity: 0; */
-  display: hide;
+  display: none;
   transition-duration: 0.5s;
 }
 
 .slide__img.active {
   /* opacity: 1; */
-  
+  display: block;
   transition-duration: 0.5s;
 }
 

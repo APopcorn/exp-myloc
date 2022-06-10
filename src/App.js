@@ -20,7 +20,7 @@ function App() {
   const [slides, setSlides] = useState([
     {
     order: 1,
-    time: 5,
+    time: 3,
     format: 'schema',
     name: "Kalender",
     schema: [
@@ -47,7 +47,7 @@ function App() {
   },
   {
     order: 2,
-    time: 5,
+    time: 3,
     format: 'schema',
     name: "Kalender ve",
     schema: [
@@ -78,17 +78,17 @@ function App() {
     name: "jpeg",
     file: TestPNG1,
   },
-  /* {
+  {
     order: 4,
     time: 5,
     format: 'file',
     name: "pdf",
     page: 2,
     file: TestPDF3,
-  }, */
+  },
   {
     order: 5,
-    time: 5,
+    time: 1,
     format: 'file',
     name: "png",
     file: TestPNG1 ,
@@ -102,20 +102,20 @@ function App() {
   }, 
   {
     order: 7,
-    time: 5,
+    time: 2,
     format: 'url',
     name: "speciel länk till byggkamera",
     url: "https://myloc.se/sv/havsalliansen-how-to-reuse-and-recycle-in-practice-and-at-scale/", 
   }, 
-  /* {
+  {
     order: 8,
     time: 5,
     format: 'file',
     name: "pdf",
-    page: 1,
+    page: 120,
     file: TestPDF2,
     filename: ""
-  }, */ 
+  }, 
   ])
 
 
