@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/exp-myloc/static/css/main.c02fc4f2.css",
-    "main.js": "/exp-myloc/static/js/main.9dfa00de.js",
+    "main.js": "/exp-myloc/static/js/main.fcd57ece.js",
     "static/js/787.e02dea3e.chunk.js": "/exp-myloc/static/js/787.e02dea3e.chunk.js",
     "static/media/test 3 Bildspel.pdf": "/exp-myloc/static/media/test 3 Bildspel.f1b09c6cf005a8762a2f.pdf",
     "static/media/test 2 Bildspel.pdf": "/exp-myloc/static/media/test 2 Bildspel.6c3e1b48bd6be2a89dde.pdf",
@@ -16,11 +16,11 @@
     "static/media/Test 1 Bildspel.xlsx": "/exp-myloc/static/media/Test 1 Bildspel.0f465acc40f8cd853a42.xlsx",
     "index.html": "/exp-myloc/index.html",
     "main.c02fc4f2.css.map": "/exp-myloc/static/css/main.c02fc4f2.css.map",
-    "main.9dfa00de.js.map": "/exp-myloc/static/js/main.9dfa00de.js.map",
+    "main.fcd57ece.js.map": "/exp-myloc/static/js/main.fcd57ece.js.map",
     "787.e02dea3e.chunk.js.map": "/exp-myloc/static/js/787.e02dea3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c02fc4f2.css",
-    "static/js/main.9dfa00de.js"
+    "static/js/main.fcd57ece.js"
   ]
 }
