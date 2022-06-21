@@ -92,7 +92,7 @@ code {
   /* position: relative; */
   width: 100vw;
   height: calc(100vh - 80px); 
-  object-fit: contain;
+  object-fit: scale-down; /* contain */
 }
 
 /* Calender */
@@ -109,12 +109,18 @@ code {
   object-fit: scale-down;
 }
 
+.pdf {
+  object-fit: scale-down;
+}
+
 
 
 /* Url */
 
-.image .website {
+.website {
   overflow: hidden;
+  object-fit: scale-down;
+   
   
 }
 
