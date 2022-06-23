@@ -7,7 +7,7 @@ const Url = ({ url }) => {
         <div className="image website">
             <iframe 
                 className="image website" 
-                src={url.url}
+                src={url.externalUrl}
                 scrolling="no" 
                 frameBorder="0"
                 

@@ -5,7 +5,7 @@ import Url from "./Url";
 
 
 
-const SlideshowWindow = ({ slides }) => {
+const SlideshowWindow = ({ slides, calendarEvents }) => {
 
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -34,7 +34,7 @@ const SlideshowWindow = ({ slides }) => {
       autoPlayRef.current()
     }
     
-    const currentSlideTime = slides[current].time;
+    const currentSlideTime = 5 // slides[current].time;
     /* console.log("time intervals: " + currentSlideTime + "s"); */
 
     const intervals = setInterval(play, 1000 * currentSlideTime)
@@ -50,24 +50,26 @@ const SlideshowWindow = ({ slides }) => {
   return (
     <section className="slideshow__window">
 
-
       {slides.map((slide, index) => {
         
-
         return (
           <div className={index === current ? 'slide__img active' : 'slide__img'} key={index}>
             {
             
             (() => {
-              switch (slide.format) {
-                case 'url':
+              switch (slide.type) {
+                case 'ExternalPage':
                   return <Url url={slide}/>
 
-                case 'file':
+                case 'Image':
                   return <File file={slide}/>
 
-                case 'schema':
-                  return <Calendar slide={slide}/>
+                case 'Calendar':
+ 
+                  return <Calendar 
+                    slide={slide} 
+                    calendarEvent={calendarEvents.filter(event => 
+                      slide.events.ids.includes(event.id))}/>
 
                 default:
                   return null

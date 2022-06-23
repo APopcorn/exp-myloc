@@ -1,6 +1,6 @@
 
 
-const Header = ({ slides }) => {
+const Header = ({ projectName, companyLogo }) => {
 
     return (
         <div className="start__header">
@@ -13,11 +13,12 @@ const Header = ({ slides }) => {
             />
             
             <div className="header__kund logo">
-                <a> {"P09002414"} -{"VallPark"} </a>
+                <a> {projectName} </a>
 
                 <img
                     className="logo"
                     src={"https://www.traineeguiden.se/uploads/media/logo_image/0001/01/jm-logo_logo_image_wide.png"} 
+                    // companyLogo 
                     alt={"temp"} 
                 />
             </div>
