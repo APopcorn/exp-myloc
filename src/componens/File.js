@@ -63,11 +63,6 @@ const File = ({ file }) => {
                   src={image[0]} 
                   alt="jpeg"
                   />
-                
-                case 'pdf2':
-                  return <>
-                  
-                </>   
                   
                    
                 default:

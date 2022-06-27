@@ -6,14 +6,12 @@ const Url = ({ url }) => {
 
         <div className="image website">
             <iframe 
+                title={url.externalUrl}
                 className="image website" 
                 src={url.externalUrl}
                 scrolling="no" 
                 frameBorder="0"
-                
-                >
-
-            </iframe>
+                />
         </div>
 
 
