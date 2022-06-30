@@ -35,8 +35,6 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
     }
     
     const currentSlideTime = 5 // slides[current].time;
-    /* console.log("time intervals: " + currentSlideTime + "s"); */
-
     const intervals = setInterval(play, 1000 * currentSlideTime)
     return () => clearInterval(intervals)
   }, [current]) 
@@ -50,7 +48,9 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
   return (
     <section className="slideshow__window">
 
-      {slides.map((slide, index) => {
+      {slides
+        .sort((a, b) => parseFloat(a.sequence) - parseFloat(b.sequence))
+          .map((slide, index) => {
         
         return (
           <div className={index === current ? 'slide__img active' : 'slide__img'} key={index}>
@@ -65,7 +65,6 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
                   return <File file={slide}/>
 
                 case 'Calendar':
- 
                   return <Calendar 
                     slide={slide} 
                     calendarEvent={calendarEvents.filter(event => 
@@ -75,10 +74,8 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
                   return null
               }
             })()
-            
             }
-            
-            
+    
           </div>
         )
       })}

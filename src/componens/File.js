@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-
-import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -27,29 +25,21 @@ const File = ({ file }) => {
     canvas.remove();
 
     setImage(images)
-    // console.log(images);
   }
   
   
   useEffect(() => {
-    if (file.name == 'pdf') {
+    if (file.name === 'pdf') {
       convertPathTToBlob()
     }
-  }, [])
+  }) // , []
   
   
     return (
         <>
-
             {(() => {
               switch (file.name) {
                 case 'png':
-                  return <img 
-                    className="image" 
-                    src={file.file} 
-                    alt="png"
-                    />
-
                 case 'jpeg':
                   return <img 
                     className="image" 
@@ -63,10 +53,9 @@ const File = ({ file }) => {
                   src={image[0]} 
                   alt="jpeg"
                   />
-                  
                    
                 default:
-                  return null
+                  return <div> Not supported file type </div>
               }
             })()}
             

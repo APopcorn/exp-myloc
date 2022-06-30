@@ -63,7 +63,6 @@ code {
 .header__kund a {
   font-size: 1.7rem;
   padding: 10px;
-
 }
 
 .logo {
@@ -104,6 +103,19 @@ code {
   /* font-size: 50px; */
  }
 
+.calender__small{
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .small_calenderHeader{
+  display: inline;
+  height: fit-content;
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 3px;
+  
+ }
 
 /* File */
 

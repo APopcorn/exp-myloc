@@ -5,10 +5,9 @@ const Header = ({ projectName, companyLogo }) => {
     return (
         <div className="start__header">
             
-
             <img 
                 className="header__myloc logo"
-                src="https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png" 
+                src="https://myloc.se/wp-content/uploads/elementor/thumbs/myloc-classic-transparent-pdttoah26385ojlt9o5o2ci2ctdbgkhua8c7excf0g.png" 
                 alt="MyLoc" 
             />
             

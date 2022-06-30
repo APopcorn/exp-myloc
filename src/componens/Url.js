@@ -1,5 +1,3 @@
-
-
 const Url = ({ url }) => {
 
     return (
