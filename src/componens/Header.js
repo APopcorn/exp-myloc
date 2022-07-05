@@ -7,7 +7,7 @@ const Header = ({ projectName, companyLogo }) => {
             
             <img 
                 className="header__myloc logo"
-                src="https://myloc.se/wp-content/uploads/elementor/thumbs/myloc-classic-transparent-pdttoah26385ojlt9o5o2ci2ctdbgkhua8c7excf0g.png" 
+                src="https://www.traineeguiden.se/uploads/media/logo_image/0001/01/jm-logo_logo_image_wide.png" 
                 alt="MyLoc" 
             />
             

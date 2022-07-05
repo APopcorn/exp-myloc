@@ -31,7 +31,7 @@ function App() {
         "projectName": "Projektnamnet",
         "companyLogo": "logo",
         "slides": [
-            /* {
+            {
               "sequence": "2",
               "type": "Calendar",
               "events": {
@@ -63,31 +63,11 @@ function App() {
               "file": TestPDF1,
               "name": "pdf",
               "page": 1
-            }, */
+            },
             {
               "sequence": "5",
               "type": "ExternalPage",
               "externalUrl": "http://myloc.se",
-            },
-            {
-              "sequence": "6",
-              "type": "ExternalPage",
-              "externalUrl": "https://sv-se.facebook.com/",
-            },
-            {
-              "sequence": "7",
-              "type": "ExternalPage",
-              "externalUrl": "https://www.google.se/?hl=sv",
-            },
-            {
-              "sequence": "8",
-              "type": "ExternalPage",
-              "externalUrl": "https://se.linkedin.com/",
-            },
-            {
-              "sequence": "9",
-              "type": "ExternalPage",
-              "externalUrl": "https://www.jm.se/",
             },
         ],
     },
@@ -241,6 +221,8 @@ function App() {
     ]
   }
 
+
+  
   useEffect(
     () => {
       axios.post(server, 
