@@ -10,14 +10,23 @@ import SmallCalenderEvent from './SmallCalenderEvent';
 import NormalCalenderEvent from './NormalCalenderEvent';
 
 
-const Calendar = ({ slide, calendarEvent }) => {
+const Calendar = ({workDayStart, workDayEnd, slide, calendarEvent }) => {
+    
+    function timeDuration(time) {
+        const lengetOfEventList = time.split("-").map(s => {
+            const ss = s.split(":")
+            return parseInt(ss[0]) * 60 + parseInt(ss[1])});
+        return lengetOfEventList[1] - lengetOfEventList[0]
+    }
+
 
     return (
         <div className='image'>
+            
             <FullCalendar 
             plugins={[ timeGridPlugin, dayGridPlugin ]} 
             initialView={slide.viewMode} 
-            weekends={true} // slide.weekends
+            weekends={slide.weekends} // slide.weekends
 
             initialDate={slide.startDate} 
             locale={enLocale}
@@ -26,21 +35,20 @@ const Calendar = ({ slide, calendarEvent }) => {
 
             firstDay={"1"}
    
-            slotMinTime={"08:00:00"} // variable for min 
-            slotMaxTime={"17:00:00"} // variable för max 
+            slotMinTime={workDayStart} 
+            slotMaxTime={workDayEnd} 
             
             height={window.innerHeight > 600 ? "calc(100vh - 80px)" : "100vh"} 
             expandRows={true}
 
+            nowIndicator={true} // temp
+
+            slotDuration={timeDuration(`${workDayStart} - ${workDayEnd}`) > 9 * 60 ? "02:00" : "00:30"}
+
             events={calendarEvent}
             eventContent={function(arg) {
-
-                const lengetOfEventList = arg.timeText.split("-").map(s => {
-                    const ss = s.split(":")
-                    return parseInt(ss[0])*60 + parseInt(ss[1])});
-                const lengetOfEvent = lengetOfEventList[1] - lengetOfEventList[0]
                 return <>
-                {lengetOfEvent > 30 ? // what point small 
+                {timeDuration(arg.timeText) > 30 ? // what point small 
                     <NormalCalenderEvent arg={arg} /> : 
                     <SmallCalenderEvent arg={arg}/> }
                 </>

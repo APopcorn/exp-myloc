@@ -20,7 +20,8 @@ const SmallCalenderEvent = ({ arg }) => {
     const horizontal = horizontal_grey  
     const rhombs = rhombs_grey 
     const verticalzigzag = verticalzigzag_grey 
-    const vertical = vertical_grey 
+    const vertical = vertical_grey
+    const blank = ""
 
 
     const event = arg.event

@@ -1,22 +1,22 @@
 
 
-const Header = ({ projectName, companyLogo }) => {
+const Header = ({ projectName, projectID, companyLogo }) => {
 
     return (
-        <div className="start__header">
+        <div className="header">
             
             <img 
-                className="header__myloc logo"
-                src="https://www.traineeguiden.se/uploads/media/logo_image/0001/01/jm-logo_logo_image_wide.png" 
+                className="header__myloc"
+                src="https://myloc.se/wp-content/uploads/2016/11/mylocconstransp..png" 
                 alt="MyLoc" 
             />
             
-            <div className="header__kund logo">
-                <a> {projectName} </a>
+            <div className="header__kund">
+                <a className="header__text"> {projectID} - {projectName} </a>
 
                 <img
-                    className="logo"
-                    src={"https://www.traineeguiden.se/uploads/media/logo_image/0001/01/jm-logo_logo_image_wide.png"} 
+                    className="companyLogo"
+                    src={companyLogo} 
                     // companyLogo 
                     alt={"temp"} 
                 />

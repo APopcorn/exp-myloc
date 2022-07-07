@@ -1,12 +1,12 @@
-const Url = ({ url }) => {
+const Url = ({ slide }) => {
 
     return (
 
         <div className="image website">
             <iframe 
-                title={url.externalUrl}
+                title={slide.externalUrl}
                 className="image website" 
-                src={url.externalUrl}
+                src={slide.externalUrl}
                 scrolling="no" 
                 frameBorder="0"
                 />

@@ -5,8 +5,7 @@ import Url from "./Url";
 
 
 
-const SlideshowWindow = ({ slides, calendarEvents }) => {
-
+const SlideshowWindow = ({ slides, tempWorkDayTime, calendarEvents }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -49,7 +48,7 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
     <section className="slideshow__window">
 
       {slides
-        .sort((a, b) => parseFloat(a.sequence) - parseFloat(b.sequence))
+        .sort((a, b) => a.sequence - b.sequence)
           .map((slide, index) => {
         
         return (
@@ -59,16 +58,18 @@ const SlideshowWindow = ({ slides, calendarEvents }) => {
             (() => {
               switch (slide.type) {
                 case 'ExternalPage':
-                  return <Url url={slide}/>
+                  return <Url slide={slide}/>
 
                 case 'Image':
-                  return <File file={slide}/>
+                  return <File slide={slide}/>
 
-                case 'Calendar':
-                  return <Calendar 
+                case 'calendar':
+                  return <Calendar
+                    workDayStart={tempWorkDayTime[0]}
+                    workDayEnd={tempWorkDayTime[1]} 
                     slide={slide} 
                     calendarEvent={calendarEvents.filter(event => 
-                      slide.events.ids.includes(event.id))}/>
+                      slide.calendarEvents.ids.includes(event.id))}/>
 
                 default:
                   return null
