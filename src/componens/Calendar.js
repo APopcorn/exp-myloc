@@ -35,6 +35,7 @@ const Calendar = ({workDayStart, workDayEnd, slide, calendarEvent }) => {
 
             firstDay={"1"}
    
+            
             slotMinTime={workDayStart} 
             slotMaxTime={workDayEnd} 
             
